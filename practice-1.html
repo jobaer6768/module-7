@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice-task-1</title>
+  <style>
+    .container{
+      border: 2px solid tomato;
+      display: grid;
+      grid-template-columns: repeat(2, 20vw 76vw);
+      height: 100vh;
+    }
+    .Left, .Right{
+      border: 2px solid aquamarine;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: bisque;
+    }
+
+    .Right{
+      background-color: darkgoldenrod;
+    }
+
+    @media screen and (max-width:567px){
+      .container{
+        grid-template-columns: repeat(1, 94vw);
+        grid-template-rows: repeat(2, 30vh 69vh);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="Left">Left</div>
+    <div class="Right">Right</div>
+  </div>
+  
+</body>
+</html>
