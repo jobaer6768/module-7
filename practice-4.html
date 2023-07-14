@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox</title>
+  <style>
+    .container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .box{
+      border: 2px solid tomato;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 10px;
+      display: flex;
+    }
+    img{
+      width: 20%;
+    }
+    p{
+      margin-left: 10px;
+    }
+
+    @media screen and (max-width:576px){
+      .container{
+        grid-template-rows: 100vh;
+      }
+      .box{
+        flex-direction: column;
+      }
+      img{
+        width: 50%;
+        margin-left: 110px;
+      }
+      p{
+        margin-top: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <img src="./images/food.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus cupiditate in, doloribus aliquid dolorem. Dicta quas, laborum perspiciatis sed asperiores vero nam inventore! Exercitationem omnis iusto inventore enim labore.</p>
+    </div>
+    <div class="box">
+      <img src="./images/food.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus cupiditate in, doloribus aliquid dolorem. Dicta quas, laborum perspiciatis sed asperiores vero nam inventore! Exercitationem omnis iusto inventore enim labore.</p>
+    </div>
+  </div>
+</body>
+</html>
